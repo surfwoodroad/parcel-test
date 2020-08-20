@@ -1,0 +1,104 @@
+.newsletter-promo {
+	background-color: var(--brand-color);
+	padding: 4% 0 6%;
+	color: #fff;
+
+	.container {
+		padding: 0 5%;
+	}
+
+	@include for-tablet-landscape-and-up {
+		padding: 3.5% 0;
+	}
+
+ }
+.icon-email {
+	display: block;
+	background: url(/images/icon-email.png) no-repeat center center;
+	background-size: contain;
+	width: 1.25em;
+	height: 2em;
+	margin: 0 auto;
+
+	@include for-tablet-landscape-and-up {
+		margin: 0;
+		display: inline-block;
+		width: 2em;
+		height: 1em;
+		vertical-align: middle;
+	}
+}
+
+.newsletter-promo-form {
+
+	@include for-tablet-landscape-and-up {
+		display: flex;
+		justify-content: space-around;
+	}
+}
+
+.newsletter-promo-text {
+	text-align: center;
+	font-weight: 300;
+	font-size: .77rem;
+	margin-bottom: 1rem;
+
+	@include for-tablet-and-up {
+		font-size: 1rem;
+		max-width: 75%;
+		margin: 0 auto 1rem;
+	}
+
+	@include for-tablet-landscape-and-up {
+		font-weight: normal;
+		text-align: left;
+		font-size: 1.25rem;
+		width: 47%;
+		margin: 0;
+	}
+}
+
+.newsletter-promo-inputs {
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+
+	input[type=email] {
+		width: 70%;
+		color: #000;
+		padding: .4rem 1.5rem;
+		border-radius: 0;
+	}
+	button {
+		width: 28%;
+		border: #fff solid 3px;
+		border-radius: 0;
+		background-color: transparent;
+		color: #fff;
+		font-family: pacifico, serif;
+		transition: all ease .3s;
+		padding-left: 0;
+		padding-right: 0;
+
+		&:hover {
+			cursor: pointer;
+			background-color: #fff;
+			color: var(--brand-color);
+		}
+	}
+
+	@include for-tablet-landscape-and-up {
+		font-weight: normal;
+		text-align: left;
+		font-size: 1.25rem;
+		width: 45%;
+
+		input[type=email] {
+			width: 70%;
+		}
+		button {
+			width: 28%;
+		}
+	}
+
+}

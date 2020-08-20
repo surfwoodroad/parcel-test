@@ -1,0 +1,87 @@
+.collections-promos {
+	padding: 1.625rem 4%;
+	display: flex;
+	justify-content: space-between;
+
+	@include for-phone {
+		flex-wrap: wrap;
+	}
+
+	@include for-desktop {
+		padding: 2% 1.625rem;
+	}
+}
+.cp-womens a {
+	background: url(/images/Womens-Image.jpg) no-repeat center center;
+}
+.cp-mens a {
+	background: url(/images/Mens-Image.jpg) no-repeat center center;
+}
+.cp-accessories a {
+	@include for-phone {
+		background: url(/images/Accessories-Image-Mobile.jpg) no-repeat center center;
+	}
+	@include for-tablet-and-up {
+		background: url(/images/Accessories-Image.jpg) no-repeat center center;
+	}
+	
+}
+
+
+
+.collection-promo {
+	position: relative;
+	height: 0;
+	padding-bottom: 60%;
+	margin-bottom: 1.5em;
+}
+@include for-phone {
+	.collection-promo {
+		width: 47%;
+	}
+	.collection-promo:last-of-type {
+		width: 100%;
+	}
+}
+@include for-tablet-and-up {
+	.collection-promo {
+		width: 31.5%;
+		padding-bottom: 44%;
+	}
+}
+
+.collection-promo {
+	a {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-size: cover;
+		font-family: pacifico;
+		transition: all ease .3s
+	}
+
+	a:hover {
+		box-shadow: 0 8px 24px 1px rgba(0, 0, 0, .5);
+	}
+
+	h2 {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		background-color: var(--brand-color);
+		color: #fff;
+		font-size: 1.5rem;
+		text-align: center;
+		line-height: 2;
+		
+		@include for-tablet-and-up {
+			font-size: 2.25rem;
+		}
+		@include for-tablet-landscape-and-up {
+			font-size: 3.125rem;
+		}
+	}
+}

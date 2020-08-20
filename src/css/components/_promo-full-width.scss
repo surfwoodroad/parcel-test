@@ -1,0 +1,53 @@
+.promo-full-width {
+	position: relative;
+	width: 100%;
+	height: 0;
+	padding-bottom: 60%;
+	background: url(/images/Promo-Hero-Image-Mobile.jpg) no-repeat center center;
+	background-size: cover;
+
+	@include for-tablet-and-up {
+		background-image: url(/images/Promo-Hero-Image.jpg);
+		padding-bottom: 44%;
+	}
+
+}
+
+.promo-full-width-content {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 3%;
+	width: 50%;
+	color: #fff;
+
+	@include for-tablet-and-up {
+		right: 2%;
+		width: 38%;
+	}
+
+	h1 {
+		font-size: 1.55rem;
+		margin-bottom: .4em;
+
+		@include for-tablet-and-up {
+			font-size: 2.25rem;
+		}
+		@include for-tablet-landscape-and-up {
+			font-size: 3.125rem;
+		}
+	}
+
+	h2 {
+		font-size: 1.25rem;
+		font-weight: 300;
+		margin-bottom: .8em;
+
+		@include for-tablet-and-up {
+			font-size: 1.75rem;
+		}
+		@include for-tablet-landscape-and-up {
+			font-size: 2.5rem;
+		}
+	}
+}

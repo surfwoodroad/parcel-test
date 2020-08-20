@@ -1,0 +1,180 @@
+/**
+ * @section Base Styles
+ */
+
+ @font-face {
+    font-family: 'lato';
+    src: url('../fonts/lato-bold.woff2') format('woff2'),
+         url('../fonts/lato-bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'lato';
+    src: url('../fonts/lato-light.woff2') format('woff2'),
+         url('../fonts/lato-light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'lato';
+    src: url('../fonts/lato-regular.woff2') format('woff2'),
+         url('../fonts/lato-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'pacifico';
+    src: url('../fonts/pacifico.woff2') format('woff2'),
+         url('../fonts/pacifico.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+$phone: "599px";
+$tablet: "600px";
+$tablet-wide-down: "899px";
+$tablet-wide: "900px";
+$lap-down: "1024px";
+$lap: "1025px";
+$desktop: "1200px";
+$wide: "1600px";
+$main: "1440px";
+  
+@mixin for-phone {
+  @media screen and (max-width: #{$phone}) { @content; }
+}
+@mixin for-tablet-and-down {
+  @media screen and (max-width: #{$tablet-wide-down}) { @content; }
+}
+@mixin for-tablet-and-up {
+  @media screen and (min-width: #{$tablet}) { @content; }
+}
+@mixin for-tablet {
+  @media screen and (min-width: #{$tablet}) and (max-width: #{$lap-down}) { @content; }
+}
+@mixin for-tablet-portrait {
+  @media screen and (min-width: #{$tablet}) and (max-width: #{$tablet-wide-down}) { @content; }
+}
+@mixin for-tablet-landscape-and-up {
+  @media screen and (min-width: #{$tablet-wide}) { @content; }
+}
+@mixin for-lap-and-down {
+  @media screen and (max-width: #{$lap-down}) { @content; }
+}
+@mixin for-lap-and-up {
+  @media screen and (min-width: #{$lap}) { @content; }
+}
+@mixin for-lap {
+  @media screen and (min-width: #{$lap}) and (max-width: #{$desktop - 1}) { @content; }
+}
+@mixin for-desktop {
+  @media screen and (min-width: #{$desktop}) { @content; }
+}
+@mixin for-big-desktop-up {
+  @media screen and (min-width: #{$wide}) { @content; }
+}
+
+input,
+textarea,
+select,
+button {
+	font: inherit;
+}
+html {
+	box-sizing: border-box;
+	font-size: 13px;
+
+	@include for-tablet-and-up {
+        font-size: 14px;
+    }
+	@include for-lap-and-up {
+        font-size: 16px;
+    }
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+body {
+	background-color: #fff;
+	font-family: lato, sans-serif;
+	font-weight: 300;
+	line-height: 1.375;
+	color: #000;
+	
+}
+
+$brand-color: #10504F;
+
+:root {
+  --brand-color: #{$brand-color};
+}
+
+.lite {font-weight: 300;}
+.normal {font-weight: 400;}
+.bold {font-weight: 700;}
+img {max-width: 100%;}
+
+.container {
+	max-width: 1440px;
+	margin: 0 auto;
+}
+
+h1 {
+	font-family: pacifico, serif;
+	font-weight: bold;
+}
+
+.section_hdr {
+	font-family: pacifico, serif;
+	font-weight: bold;
+	font-size: 1.55rem;
+	text-align: center;
+	margin-bottom: .8em;
+
+	@include for-tablet-and-up {
+		font-size: 2rem;
+	}
+	@include for-lap-and-up {
+		font-size: 2.1875rem;
+	}
+}
+
+.btn {
+	background-color: var(--brand-color);
+	font-size: .75rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-decoration: none;
+	display: inline-block;
+	padding: .6rem 1.6rem;
+	color: #fff;
+	letter-spacing: .025rem;
+	transition: all ease .3s;
+
+	@include for-tablet-and-up {
+		font-size: 1rem;
+		padding: .7rem 1.75rem;
+	}
+	@include for-tablet-landscape-and-up {
+		font-size: 1.25rem;
+	}
+
+	&:hover {
+		color: var(--brand-color);
+		background-color: #fff;
+	}
+}
+.btn.btn-black {
+	background-color: #000;
+
+	&:hover {
+		color: #000;
+		background-color: #fff;
+	}
+}
+

@@ -1,0 +1,85 @@
+.product-carousel-wrap {
+	margin-bottom: 3%;
+}
+.product-carousel {
+
+	padding: 0 5%;
+
+	.carousel-cell {
+		width: 50%;
+		padding: 0 2%;
+		
+		@include for-tablet-landscape-and-up {
+			width: 25%;
+		}
+	}
+
+	.flickity-button-icon {
+		fill: var(--brand-color);
+	}
+
+	.flickity-prev-next-button.previous svg,
+	.flickity-prev-next-button.next svg {
+		opacity: 0;
+	}
+	.flickity-prev-next-button.previous {
+		background: url(/images/Arrow-Left.png) no-repeat center center;
+	}
+	.flickity-prev-next-button.next {
+		background: url(/images/Arrow-Right.png) no-repeat center center;
+		
+	}
+	.flickity-prev-next-button.previous, 
+	.flickity-prev-next-button.next {
+		background-size: 35%;
+
+		@include for-tablet-landscape-and-up {
+			background-size: 50%;
+		}
+	}
+	
+}
+
+.product-carousel-content {
+	text-align: center;
+	display: block;
+	text-decoration: none;
+	color: #000;
+
+	&:hover {
+		border: solid 1px #ddd;
+	}
+	
+	img {
+		width: 100%;
+		display: block;
+		margin-bottom: 1rem;
+	}
+	h2 {
+		font-weight: normal;
+		font-size: 1.25rem;
+		
+		@include for-tablet-and-up {
+			font-size: 1.125rem;
+		}
+	}
+	h3 {
+		font-weight: 300;
+		font-size: .925rem;
+		
+		@include for-tablet-and-up {
+			font-size: 1rem;
+		}
+	}
+	h4 {
+		font-family: pacifico, serif;
+		color: var(--brand-color);
+		margin-top: .75rem;
+		font-size: 1.25rem;
+		
+		@include for-tablet-and-up {
+			font-size: 1.375rem;
+		}
+	}
+
+}
