@@ -1,6 +1,6 @@
-# empty-project
+# Parcel Test Project
 
-Parcel test.
+Trying Parcel, porting over a code sample test originally done with Gulp.
 
 ## Building and running on localhost
 
